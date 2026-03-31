@@ -17,3 +17,23 @@ def print_table_titel(df, title):
 
    print (table_str)
    print("="*width+"\n")
+
+
+def prettify(df):
+    return df.rename(columns={
+        "transaction_id": "ID",
+        "client_name": "Customer",
+        "platform_name": "Platform",
+        "asset_symbol": "Asset",
+        "status_name": "Status",
+        "currency_code": "Currency",
+        "transaction_date": "Date",
+        "amount": "Amount",
+        "buy_price": "Buy Price",
+        "buy_price_eur": "Buy Price (EUR)",
+        "exchange_fee_eur": "Exchange Fee",
+        "service_fee_eur": "Service Fee",
+        "referral_bonus_eur": "Referral Bonus",
+        "total_buy_eur": "Total Investment (EUR)",
+        "total_cost_eur": "Total Cost (EUR)",
+    })

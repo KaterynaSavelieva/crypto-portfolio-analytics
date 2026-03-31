@@ -1,0 +1,16 @@
+client_id,client_name,country,date,asset,asset_type,amount,buy_price_usd,exchange,fee,status
+1,Anna,Austria,2025-01-10,BTC,crypto,0.05,42000,Binance,10,completed
+2,Mark,Germany,2025-02-15,BTC,crypto,0.02,45000,Coinbase,8,completed
+1,Anna,Austria,2025-03-01,BTC,crypto,0.03,46000,Binance,9,completed
+3,Julia,Austria,2025-02-20,BTC,crypto,0.01,47000,Kraken,7,completed
+4,Tom,Germany,2025-01-05,ETH,crypto,1.2,2500,Binance,5,completed
+5,Lisa,Austria,2025-01-12,ETH,crypto,0.8,2600,Coinbase,6,completed
+2,Mark,Germany,2025-03-10,ETH,crypto,0.5,2700,Kraken,4,completed
+3,Julia,Austria,2025-03-15,BTC,crypto,0.015,48000,Binance,6,completed
+1,Anna,Austria,2025-04-01,ETH,crypto,0.3,2800,Coinbase,3,completed
+6,David,Switzerland,2025-02-01,BTC,crypto,0.04,43000,Kraken,8,completed
+7,Sarah,Germany,2025-02-18,ETH,crypto,1.5,2550,Binance,7,completed
+8,Michael,Austria,2025-03-05,BTC,crypto,0.025,44000,Coinbase,9,completed
+4,Tom,Germany,2025-03-20,ETH,crypto,0.7,2750,Binance,4,completed
+5,Lisa,Austria,2025-04-02,BTC,crypto,0.02,45000,Kraken,5,completed
+6,David,Switzerland,2025-04-10,ETH,crypto,0.6,2900,Coinbase,6,completed
