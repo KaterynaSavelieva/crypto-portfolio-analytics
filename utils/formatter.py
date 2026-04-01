@@ -26,7 +26,7 @@ def prettify(df):
         "platform_name": "Platform",
         "asset_symbol": "Asset",
         "status_name": "Status",
-        "currency_code": "Currency",
+        "currency_code": "Original Currency",
         "transaction_date": "Date",
         "amount": "Amount",
         "buy_price": "Buy Price",

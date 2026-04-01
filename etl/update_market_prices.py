@@ -9,6 +9,10 @@ def update_market_prices():
     print("Loading market prices from API...")
     prices = get_market_prices()
 
+    if prices is None:
+        print("API error - no prices received")
+        return
+
     connection = create_connection()
     try:
         asset_map = get_asset_ids(connection)
