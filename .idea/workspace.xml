@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b131f5-2ba3-4839-b002-6c10480ea3c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/exchange_rate_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.$Crypto.drawio.dtmp" beforeDir="false" afterPath="$PROJECT_DIR$/.$Crypto.drawio.dtmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/etl/generate_transactions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/analysis.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/dev_debug.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.$Crypto.drawio.dtmp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/etl/extract_historical_prices.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl/extract_historical_prices.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/etl/update_historical_prices.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl/update_historical_prices.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crypto.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Crypto.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/note.docx" beforeDir="false" afterPath="$PROJECT_DIR$/note.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -55,6 +57,7 @@
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Python.extract.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generate_transactions.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_select.executor&quot;: &quot;Run&quot;,
     &quot;Python.update_historical_prices.executor&quot;: &quot;Run&quot;,
@@ -67,10 +70,33 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\051066\Crypto Portfolio Analytics System\notebooks" />
       <recent name="C:\Users\051066\Crypto Portfolio Analytics System\archiv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.update_historical_prices">
+  <component name="RunManager" selected="Python.generate_transactions">
+    <configuration name="generate_transactions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Crypto Portfolio Analytics System" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/etl" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/etl/generate_transactions.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Crypto Portfolio Analytics System" />
       <option name="ENV_FILES" value="" />
@@ -161,6 +187,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.generate_transactions" />
         <item itemvalue="Python.update_historical_prices" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.update_market_prices" />
