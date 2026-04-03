@@ -1,10 +1,9 @@
-import requests
 from datetime import datetime
-
 from utils.api_client import fetch_with_retry
 
+
 # Diese Funktion holt historische Tagespreise von CoinGecko (BTC, ETH usw.)
-def get_historical_prices (coin_id, start_date, end_date):
+def get_historical_prices(coin_id, start_date, end_date):
 
     # URL für historische Daten (Zeitraum)
     url = f"https://api.coingecko.com/api/v3/coins/{coin_id}/market_chart/range"
@@ -15,13 +14,14 @@ def get_historical_prices (coin_id, start_date, end_date):
 
     # Parameter für die API-Anfrage
     params = {
-        "vs_currency": "eur",   # wir wollen Preise in Euro
+        "vs_currency": "usd",   # wichtig: wir holen jetzt USD
         "from": start_timestamp,
         "to": end_timestamp,
     }
 
-
+    # API-Aufruf mit Retry-Logik
     data = fetch_with_retry(url, params)
+
     if data is None:
         print("Keine historischen Daten erhalten")
         return []
@@ -30,9 +30,9 @@ def get_historical_prices (coin_id, start_date, end_date):
     daily_prices = []
 
     # Durch alle Preis-Daten iterieren
-    for price_entry in data['prices']:
+    for price_entry in data["prices"]:
         timestamp_ms = price_entry[0]     # Zeit in Millisekunden
-        price_eur = price_entry[1]        # Preis in EUR
+        price_usd = price_entry[1]        # USD Preis
 
         # Timestamp → Datum (Format YYYY-MM-DD)
         price_date = datetime.fromtimestamp(timestamp_ms / 1000).strftime("%Y-%m-%d")
@@ -40,11 +40,8 @@ def get_historical_prices (coin_id, start_date, end_date):
         # Ergebnis in Liste speichern
         daily_prices.append({
             "price_date": price_date,
-            "price_eur": price_eur
+            "price_usd": price_usd   # wichtig: ключ price_usd
         })
 
     # Liste mit Tagespreisen zurückgeben
     return daily_prices
-
-
-
