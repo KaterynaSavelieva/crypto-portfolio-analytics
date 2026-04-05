@@ -1,4 +1,4 @@
-from etl.update_market_prices import update_market_prices
+from etl.current.update_market_prices import update_market_prices
 from db.test_select import load_transactions
 from utils.formatter import *
 

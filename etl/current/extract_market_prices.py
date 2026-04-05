@@ -6,17 +6,19 @@ def get_market_prices():
 
     params = {
         "ids": "bitcoin,ethereum",
-        "vs_currencies": "eur",
+        "vs_currencies": "usd",
     }
 
 
     data = fetch_with_retry(url, params)
 
     if data is None:
-        print("Keine Daten von API erhalten")
+        print("No data received from API")
         return None
 
     return {
-        "BTC": data["bitcoin"]["eur"],
-        "ETH": data["ethereum"]["eur"],
+        "BTC": data["bitcoin"]["usd"],
+        "ETH": data["ethereum"]["usd"],
     }
+
+

@@ -1,7 +1,7 @@
 from utils.exchange_rate_api import get_eur_rate
 from db.db_connection import create_connection
-from etl.extract_historical_prices import get_historical_prices
-from etl.load_market_prices import get_asset_ids
+from etl.historical.extract_historical_prices import get_historical_prices
+from etl.shared.load_market_prices import get_asset_ids
 
 
 # Diese Funktion speichert historische Preise mit USD, EUR-Kurs und EUR-Preis.
@@ -15,7 +15,7 @@ def update_prices_with_eur(connection, asset_id, prices):
         # USD-Preis aus den historischen Daten holen
         price_usd = row["price_usd"]
 
-        # EUR-Kurs für dieses Datum holen
+        # EUR-Kurs für dieses Datum holen (api frankfurt)
         eur_rate = get_eur_rate(date)
 
         # Wenn kein Kurs gefunden wurde, diesen Tag überspringen
@@ -40,7 +40,7 @@ def update_prices_with_eur(connection, asset_id, prices):
 
 
 # Diese Funktion lädt historische Preise und speichert sie in der Datenbank.
-def update_historical_prices():
+def update_historical_prices(start_date, end_date):
     print("Loading historical market prices...")
 
     connection = create_connection()
@@ -51,11 +51,11 @@ def update_historical_prices():
         print("Asset map:", asset_map)
 
         # Historische BTC-Daten laden
-        btc_prices = get_historical_prices("bitcoin", "2025-04-10", "2026-04-01")
+        btc_prices = get_historical_prices("bitcoin", start_date, end_date)
         print("BTC prices loaded:", len(btc_prices))
 
         # Historische ETH-Daten laden
-        eth_prices = get_historical_prices("ethereum", "2025-04-10", "2026-04-01")
+        eth_prices = get_historical_prices("ethereum", start_date, end_date)
         print("ETH prices loaded:", len(eth_prices))
 
         # BTC mit USD, EUR-Kurs und EUR-Preis speichern
@@ -73,7 +73,3 @@ def update_historical_prices():
         connection.close()
 
 
-# Diese Bedingung sorgt dafür, dass die Funktion nur beim direkten Start ausgeführt wird
-# und nicht beim Import in einer anderen Python-Datei.
-if __name__ == "__main__":
-    update_historical_prices()

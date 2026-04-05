@@ -3,14 +3,26 @@ from db.db_connection import create_connection
 
 
 # Diese Funktion holt alle Marktpreise aus der Datenbank
-def get_market_prices(connection):
+def get_market_prices(connection, start_date=None, end_date=None):
     cursor = connection.cursor(dictionary=True)
 
-    cursor.execute("""
+    # Basis-Query
+    query = """
         SELECT asset_id, price_date, price_usd, price_eur
         FROM market_prices
-        ORDER BY price_date
-    """)
+    """
+
+    # Wenn Zeitraum angegeben ist - WHERE hinzufügen
+    if start_date and end_date:
+        query += " WHERE DATE(price_date) BETWEEN %s AND %s"
+
+    query += " ORDER BY price_date"
+
+    # Query ausführen
+    if start_date and end_date:
+        cursor.execute(query, (start_date, end_date))
+    else:
+        cursor.execute(query)
 
     rows = cursor.fetchall()
     cursor.close()
@@ -19,7 +31,7 @@ def get_market_prices(connection):
 
 
 # Diese Funktion generiert realistische Transaktionen
-def generate_transactions():
+def generate_transactions(start_date=None, end_date=None, use_random=True):
     # Verbindung zur Datenbank öffnen
     connection = create_connection()
     cursor = connection.cursor()
@@ -29,8 +41,8 @@ def generate_transactions():
     portfolio = {}
 
     try:
-        # Marktpreise laden
-        market_prices = get_market_prices(connection)
+        # Marktpreise laden (mit Zeitraum, falls angegeben)
+        market_prices = get_market_prices(connection, start_date, end_date)
 
         # Beispiel IDs (Demo-Daten)
         client_ids = [1, 2, 3, 4, 5, 6]
@@ -45,7 +57,7 @@ def generate_transactions():
             price_eur = float(row["price_eur"])
 
             # Nur ca. 30% der Daten verwenden (nicht zu viele Transaktionen)
-            if random.random() > 0.3:
+            if use_random and random.random() > 0.3:
                 continue
 
             # Zufällige Auswahl
@@ -131,11 +143,6 @@ def generate_transactions():
         print("Realistic transactions were created")
 
     finally:
-        # Verbindung schließen (immer!)
+        # Verbindung schließen
         cursor.close()
         connection.close()
-
-
-# Startpunkt - wird nur beim direkten Start ausgeführt
-if __name__ == "__main__":
-    generate_transactions()
