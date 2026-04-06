@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b131f5-2ba3-4839-b002-6c10480ea3c0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.$Crypto.drawio.dtmp" beforeDir="false" afterPath="$PROJECT_DIR$/.$Crypto.drawio.dtmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/Script-1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/Script-1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/data.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/views.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/etl/current/run_current_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl/current/run_current_pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/etl/historical/run_historical_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl/historical/run_historical_pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/analysis.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="78b131f5-2ba3-4839-b002-6c10480ea3c0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
