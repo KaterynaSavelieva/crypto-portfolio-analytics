@@ -5,7 +5,7 @@ from utils.formatter import print_header
 
 def run_historical_pipeline():
     start_date = "2025-04-10"
-    end_date = "2026-04-01"
+    end_date = "2026-04-05"
 
     print_header("HISTORICAL PIPELINE START")
 

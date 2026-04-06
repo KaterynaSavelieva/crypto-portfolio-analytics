@@ -13,7 +13,7 @@ def run_current_pipeline():
     update_market_prices()
 
     # 2. Transaktionen nur für heute generieren
-    generate_transactions(today, today, use_random=False)
+    generate_transactions(today, today, use_random=True)
 
     print_header("CURRENT PIPELINE FINISHED")
 
