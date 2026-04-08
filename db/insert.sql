@@ -16,7 +16,7 @@ INSERT INTO abo_types (abo_type_name) VALUES
 INSERT INTO asset_types (asset_type_name) VALUES
 ('Crypto');
 
-
+Ф
 --  platforms
 INSERT INTO platforms (platform_name) VALUES
 ('Binance'),
@@ -69,3 +69,15 @@ INSERT INTO transactions (
 
 -- pending
 (6, 3, 1, 1, '2025-04-06', 0.03, 48000, 1, 44160, 9, 4, 0, 'BUY');
+
+
+
+UPDATE transactions t
+JOIN market_prices mp 
+    ON t.asset_id = mp.asset_id
+SET
+    t.transaction_date = '2025-04-10',
+    t.buy_price = mp.price_usd,
+    t.buy_price_eur = mp.price_eur
+WHERE mp.price_date = '2025-04-10'
+AND t.transaction_date < '2025-04-10';

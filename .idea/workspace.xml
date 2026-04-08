@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b131f5-2ba3-4839-b002-6c10480ea3c0" name="Changes" comment="" />
+    <list default="true" id="78b131f5-2ba3-4839-b002-6c10480ea3c0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/utils/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/insert.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/view.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/view.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etl/current/run_current_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl/current/run_current_pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etl/current/update_market_prices.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl/current/update_market_prices.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etl/historical/run_historical_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl/historical/run_historical_pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note.docx" beforeDir="false" afterPath="$PROJECT_DIR$/note.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/analysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/dev_debug.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/dev_debug.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerbi/Crypto Portfolio Analytics Dashboard.pbix" beforeDir="false" afterPath="$PROJECT_DIR$/powerbi/Crypto Portfolio Analytics Dashboard.pbix" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +82,7 @@
       <recent name="C:\Users\051066\Crypto Portfolio Analytics System\archiv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_select">
+  <component name="RunManager" selected="Python.run_historical_pipeline">
     <configuration name="generate_transactions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Crypto Portfolio Analytics System" />
       <option name="ENV_FILES" value="" />
@@ -183,9 +195,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_select" />
-        <item itemvalue="Python.run_current_pipeline" />
         <item itemvalue="Python.run_historical_pipeline" />
+        <item itemvalue="Python.run_current_pipeline" />
+        <item itemvalue="Python.test_select" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.generate_transactions" />
       </list>
@@ -217,14 +229,14 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>file://$PROJECT_DIR$/notebooks/dev_debug.ipynb</url>
-          <line>1</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
           <url>file://$PROJECT_DIR$/notebooks/analysis.ipynb</url>
           <line>1</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
+          <url>file://$PROJECT_DIR$/notebooks/dev_debug.ipynb</url>
+          <line>39</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
