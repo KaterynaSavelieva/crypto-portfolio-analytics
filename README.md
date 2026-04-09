@@ -7,11 +7,12 @@ Es lädt automatisch Marktdaten aus externen APIs, verarbeitet diese Daten und s
 Das Ziel ist es, ein Portfolio von Kryptowährungen zu analysieren und wichtige Kennzahlen wie Gewinn, Verlust und Portfolio-Wert zu berechnen.
 
 🎯 Ziele des Projekts
-Analyse von Kryptowährungen (Bitcoin, Ethereum)
-Arbeiten mit echten Daten aus APIs
-Aufbau eines ETL-Prozesses (Extract, Transform, Load)
-Berechnung von Portfolio-Kennzahlen
-Visualisierung der Ergebnisse in Power BI
+    Analyse von Kryptowährungen (Bitcoin, Ethereum)
+    Arbeiten mit echten Daten aus APIs
+    Aufbau eines ETL-Prozesses (Extract, Transform, Load)
+    Berechnung von Portfolio-Kennzahlen
+    Visualisierung der Ergebnisse in Power BI
+
 🔗 Datenquellen (APIs)
 CoinGecko API → Kryptowährungspreise
 Exchange Rate API → USD → EUR Wechselkurse
