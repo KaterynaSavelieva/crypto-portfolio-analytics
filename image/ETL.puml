@@ -1,0 +1,74 @@
+@startuml
+title UML Class Diagram - ETL System
+left to right direction
+skinparam classAttributeIconSize 0
+
+package "API Layer" {
+    class ApiClient {
+        +fetch_with_retry(url, params)
+    }
+
+    class ExchangeRateAPI {
+        +get_eur_rate(date)
+    }
+
+    class MarketPriceAPI {
+        +get_market_prices()
+        +get_historical_prices()
+    }
+}
+
+package "ETL Layer" {
+    class ExtractMarketPrices {
+        +extract_current_prices()
+    }
+
+    class ExtractHistoricalPrices {
+        +extract_historical_prices()
+    }
+
+    class UpdateMarketPrices {
+        +run_update()
+    }
+}
+
+package "Data Layer" {
+    class DatabaseConnection {
+        +create_connection()
+    }
+
+    class MarketPriceLoader {
+        +save_market_prices()
+        +save_historical_prices()
+    }
+}
+
+package "Model" {
+    class Asset {
+        -asset_id
+        -asset_symbol
+    }
+
+    class MarketPrice {
+        -asset_id
+        -price_date
+        -price_eur
+    }
+}
+
+ApiClient ..> ExchangeRateAPI : uses
+ApiClient ..> MarketPriceAPI : uses
+
+ExchangeRateAPI ..> ExtractHistoricalPrices
+MarketPriceAPI ..> ExtractMarketPrices
+MarketPriceAPI ..> UpdateMarketPrices
+
+ExtractMarketPrices --> MarketPriceLoader
+ExtractHistoricalPrices --> MarketPriceLoader
+UpdateMarketPrices --> MarketPriceLoader
+
+MarketPriceLoader --> DatabaseConnection : uses
+MarketPriceLoader ..> Asset
+MarketPriceLoader ..> MarketPrice
+
+@enduml

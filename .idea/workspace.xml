@@ -5,17 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b131f5-2ba3-4839-b002-6c10480ea3c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archiv/Average.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/etl/shared/build_portfolio_snapshot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/ETL.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/insert.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Average.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crypto.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mappe1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/archiv/Mappe1.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/Script-1.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/Script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/Script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/test_select.py" beforeDir="false" afterPath="$PROJECT_DIR$/archiv/test_select.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/view.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/view.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etl/current/extract_market_prices.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl/current/extract_market_prices.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/etl/current/run_current_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl/current/run_current_pipeline.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/etl/current/update_market_prices.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl/current/update_market_prices.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/etl/historical/run_historical_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl/historical/run_historical_pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note.docx" beforeDir="false" afterPath="$PROJECT_DIR$/note.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etl/shared/generate_transactions.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl/shared/generate_transactions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etl/shared/load_market_prices.py" beforeDir="false" afterPath="$PROJECT_DIR$/etl/shared/load_market_prices.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note.docx" beforeDir="false" afterPath="$PROJECT_DIR$/archiv/note.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/dev_debug.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/dev_debug.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerbi/Crypto Portfolio Analytics Dashboard.pbix" beforeDir="false" afterPath="$PROJECT_DIR$/powerbi/Crypto Portfolio Analytics Dashboard.pbix" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerbi/Crypto Portfolio Analytics Dashboard.pbix" beforeDir="false" afterPath="$PROJECT_DIR$/archiv/Crypto Portfolio Analytics Dashboard.pbix" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerbi/Crypto_Analytics_PowerBI.pbix" beforeDir="false" afterPath="$PROJECT_DIR$/archiv/Crypto_Analytics_PowerBI.pbix" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerbi/Crypto_Portfolio_Analytics_Dashboard.pbix" beforeDir="false" afterPath="$PROJECT_DIR$/powerbi/Crypto_Portfolio_Analytics_Dashboard.pbix" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/api_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/exchange_rate_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/exchange_rate_api.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +40,7 @@
       <list>
         <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="UML Sequence" />
       </list>
     </option>
   </component>
@@ -56,34 +70,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.extract.executor&quot;: &quot;Run&quot;,
-    &quot;Python.generate_transactions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.run_current_pipeline.executor&quot;: &quot;Run&quot;,
-    &quot;Python.run_historical_pipeline.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_select.executor&quot;: &quot;Run&quot;,
-    &quot;Python.update_historical_prices.executor&quot;: &quot;Run&quot;,
-    &quot;Python.update_market_prices.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultPlantUmlFileTemplate": "UML Sequence",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.build_portfolio_snapshot.executor": "Run",
+    "Python.extract.executor": "Run",
+    "Python.generate_transactions.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.run_current_pipeline.executor": "Run",
+    "Python.run_historical_pipeline.executor": "Run",
+    "Python.test_select.executor": "Run",
+    "Python.update_historical_prices.executor": "Run",
+    "Python.update_market_prices.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/051066/Crypto Portfolio Analytics System"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\051066\Crypto Portfolio Analytics System" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\051066\Crypto Portfolio Analytics System\image" />
+      <recent name="C:\Users\051066\Crypto Portfolio Analytics System\archiv" />
       <recent name="C:\Users\051066\Crypto Portfolio Analytics System\etl\historical" />
       <recent name="C:\Users\051066\Crypto Portfolio Analytics System\etl\shared" />
       <recent name="C:\Users\051066\Crypto Portfolio Analytics System\etl\current" />
-      <recent name="C:\Users\051066\Crypto Portfolio Analytics System\notebooks" />
-      <recent name="C:\Users\051066\Crypto Portfolio Analytics System\archiv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_historical_pipeline">
-    <configuration name="generate_transactions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.build_portfolio_snapshot">
+    <configuration name="build_portfolio_snapshot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Crypto Portfolio Analytics System" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -92,11 +112,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/etl" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/etl/shared" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\051066\Crypto Portfolio Analytics System\etl\shared\generate_transactions.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/etl/shared/build_portfolio_snapshot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -184,7 +204,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db/test_select.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\051066\Crypto Portfolio Analytics System\archiv\test_select.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -195,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.build_portfolio_snapshot" />
+        <item itemvalue="Python.test_select" />
         <item itemvalue="Python.run_historical_pipeline" />
         <item itemvalue="Python.run_current_pipeline" />
-        <item itemvalue="Python.test_select" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.generate_transactions" />
       </list>
     </recent_temporary>
   </component>
@@ -225,8 +245,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/etl/current/update_market_prices.py</url>
-          <line>2</line>
+          <line>7</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/logger.py</url>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/etl/current/run_current_pipeline.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
           <url>file://$PROJECT_DIR$/notebooks/analysis.ipynb</url>

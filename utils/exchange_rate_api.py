@@ -1,21 +1,33 @@
+# Import der Hilfsfunktion für API-Anfragen
 from utils.api_client import fetch_with_retry
+
+# Import für Datum (optional für weitere Logik)
 from datetime import datetime, timedelta
 
-# Diese Funktion holt den EUR-Kurs für ein bestimmtes Datum (USD -> EUR)
+
+# Diese Funktion holt den EUR-Kurs für ein bestimmtes Datum (USD - EUR)
+# Dieser wird später für die Berechnung verwendet.
 def get_eur_rate(date):
+
+    # API URL mit Datum
     url = "https://api.frankfurter.dev/v1/" + date
 
+    # Parameter:
+    # Basis ist USD, wir wollen EUR
     params = {
         "base": "USD",
         "symbols": "EUR"
     }
 
+    # API-Aufruf mit Retry-Logik
     data = fetch_with_retry(url, params=params)
 
+    # Wenn keine Daten zurückkommen
     if data is None:
         print("No exchange rate data received")
         return None
 
+    # Rückgabe des EUR-Kurses
     return data["rates"]["EUR"]
 
 

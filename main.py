@@ -1,13 +1,15 @@
-from etl.current.update_market_prices import update_market_prices
-from db.test_select import load_transactions
-from utils.formatter import *
+from etl.current.run_current_pipeline import run_current_pipeline
+from etl.shared.build_portfolio_snapshot import main as build_snapshot
+from utils.formatter import print_header
+
 
 def main():
-    print("Project started successfully.")
-    update_market_prices()
+    print_header("CRYPTO PORTFOLIO PROJECT START")
 
-    df = load_transactions()
-    print_table_titel(prettify(df), "Transactions")
+    run_current_pipeline()
+    build_snapshot()
+
+    print_header("CRYPTO PORTFOLIO PROJECT FINISHED")
 
 
 if __name__ == "__main__":
