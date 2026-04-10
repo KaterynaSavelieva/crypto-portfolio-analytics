@@ -19,6 +19,7 @@ package "API Layer" {
 }
 
 package "ETL Layer" {
+
     class ExtractMarketPrices {
         +extract_current_prices()
     }
@@ -30,9 +31,18 @@ package "ETL Layer" {
     class UpdateMarketPrices {
         +run_update()
     }
+
+    class GenerateTransactions {
+        +generate_transactions()
+    }
+
+    class BuildPortfolioSnapshot {
+        +build_snapshot()
+    }
 }
 
 package "Data Layer" {
+
     class DatabaseConnection {
         +create_connection()
     }
@@ -40,6 +50,23 @@ package "Data Layer" {
     class MarketPriceLoader {
         +save_market_prices()
         +save_historical_prices()
+    }
+
+    class SnapshotLoader {
+        +insert_snapshot()
+        +clear_snapshot()
+    }
+}
+
+package "Utils" {
+    class Logger {
+        +get_logger()
+        +info()
+        +error()
+    }
+
+    class Formatter {
+        +print_header()
     }
 }
 
@@ -56,19 +83,37 @@ package "Model" {
     }
 }
 
+' API usage
 ApiClient ..> ExchangeRateAPI : uses
 ApiClient ..> MarketPriceAPI : uses
 
-ExchangeRateAPI ..> ExtractHistoricalPrices
+' ETL flow
 MarketPriceAPI ..> ExtractMarketPrices
 MarketPriceAPI ..> UpdateMarketPrices
+ExchangeRateAPI ..> ExtractHistoricalPrices
 
 ExtractMarketPrices --> MarketPriceLoader
 ExtractHistoricalPrices --> MarketPriceLoader
 UpdateMarketPrices --> MarketPriceLoader
 
-MarketPriceLoader --> DatabaseConnection : uses
+' New flow
+UpdateMarketPrices --> GenerateTransactions
+GenerateTransactions --> BuildPortfolioSnapshot
+
+BuildPortfolioSnapshot --> SnapshotLoader
+
+' DB usage
+MarketPriceLoader --> DatabaseConnection
+SnapshotLoader --> DatabaseConnection
+
+' Models
 MarketPriceLoader ..> Asset
 MarketPriceLoader ..> MarketPrice
+BuildPortfolioSnapshot ..> MarketPrice
+
+' Utils usage
+UpdateMarketPrices ..> Logger
+GenerateTransactions ..> Logger
+BuildPortfolioSnapshot ..> Logger
 
 @enduml

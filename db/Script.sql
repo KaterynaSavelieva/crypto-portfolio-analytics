@@ -67,4 +67,12 @@ WHERE s.status_name = 'completed'
 -- GROUP BY t.client_id, a.asset_symbol
 ORDER BY t.client_id;
 
+UPDATE transactions
+SET amount = amount * 2
+WHERE asset_id = 2
+AND transaction_date < '2026-04-01';
 
+UPDATE transactions
+SET amount = amount * 3
+WHERE asset_id = 1
+AND transaction_date < '2026-04-01';
