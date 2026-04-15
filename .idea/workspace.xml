@@ -5,16 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b131f5-2ba3-4839-b002-6c10480ea3c0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.$Crypto.drawio.bkp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/erd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/holdings_performance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/portfolio_overview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/realized_profit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/uml.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2026-04-11.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2026-04-12.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2026-04-13.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2026-04-14.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2026-04-15.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Crypto.drawio" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/Crypto.drawio" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ETL.puml" beforeDir="false" afterPath="$PROJECT_DIR$/image/ETL.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/uml-.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/dev_debug.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/dev_debug.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/SystemArchitecture.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/architecture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2026-04-10.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/2026-04-10.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerbi/Crypto_Portfolio_Analytics_Dashboard.pbix" beforeDir="false" afterPath="$PROJECT_DIR$/powerbi/Crypto_Portfolio_Analytics_Dashboard.pbix" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ 1.docx" beforePathEscaped="$PROJECT_DIR$/🎤 1.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +92,7 @@
       <recent name="C:\Users\051066\Crypto Portfolio Analytics System\etl\current" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.build_portfolio_snapshot">
+  <component name="RunManager" selected="Python.main">
     <configuration name="build_portfolio_snapshot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Crypto Portfolio Analytics System" />
       <option name="ENV_FILES" value="" />
@@ -201,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.build_portfolio_snapshot" />
         <item itemvalue="Python.test_select" />
         <item itemvalue="Python.run_historical_pipeline" />
         <item itemvalue="Python.run_current_pipeline" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>

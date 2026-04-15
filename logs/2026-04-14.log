@@ -1,0 +1,84 @@
+2026-04-14 10:04:21 | INFO | current_pipeline | Starting current pipeline
+2026-04-14 10:04:21 | INFO | crypto_pipeline | Updating market prices
+2026-04-14 10:04:23 | INFO | crypto_pipeline | Asset IDs:
+2026-04-14 10:04:23 | INFO | crypto_pipeline | Saved BTC: price_usd=74556, eur_rate=0.85587, price_eur=63810.24372000
+2026-04-14 10:04:23 | INFO | crypto_pipeline | Saved ETH: price_usd=2378.15, eur_rate=0.85587, price_eur=2035.38724050
+2026-04-14 10:04:23 | INFO | crypto_pipeline | Current market prices saved successfully.
+2026-04-14 10:04:23 | INFO | current_pipeline | Current market prices updated successfully
+2026-04-14 10:04:23 | INFO | current_pipeline | Transactions for today generated successfully
+2026-04-14 10:04:23 | INFO | portfolio_snapshot | Starting portfolio daily snapshot build
+2026-04-14 10:04:24 | INFO | portfolio_snapshot | portfolio_daily_snapshot updated successfully
+2026-04-14 10:04:24 | INFO | current_pipeline | Portfolio snapshot updated successfully
+2026-04-14 10:04:24 | INFO | current_pipeline | Finished current pipeline
+2026-04-14 10:05:02 | INFO | current_pipeline | Starting current pipeline
+2026-04-14 10:05:02 | INFO | crypto_pipeline | Updating market prices
+2026-04-14 10:05:07 | INFO | crypto_pipeline | Asset IDs:
+2026-04-14 10:05:07 | INFO | crypto_pipeline | Saved BTC: price_usd=74556, eur_rate=0.85587, price_eur=63810.24372000
+2026-04-14 10:05:07 | INFO | crypto_pipeline | Saved ETH: price_usd=2378.15, eur_rate=0.85587, price_eur=2035.38724050
+2026-04-14 10:05:07 | INFO | crypto_pipeline | Current market prices saved successfully.
+2026-04-14 10:05:07 | INFO | current_pipeline | Current market prices updated successfully
+2026-04-14 10:05:07 | INFO | current_pipeline | Transactions for today generated successfully
+2026-04-14 10:05:07 | INFO | portfolio_snapshot | Starting portfolio daily snapshot build
+2026-04-14 10:05:07 | INFO | portfolio_snapshot | portfolio_daily_snapshot updated successfully
+2026-04-14 10:05:07 | INFO | current_pipeline | Portfolio snapshot updated successfully
+2026-04-14 10:05:07 | INFO | current_pipeline | Finished current pipeline
+2026-04-14 13:07:19 | INFO | current_pipeline | Starting current pipeline
+2026-04-14 13:07:19 | INFO | crypto_pipeline | Updating market prices
+2026-04-14 14:07:30 | INFO | crypto_pipeline | Asset IDs:
+2026-04-14 14:07:30 | INFO | crypto_pipeline | Saved BTC: price_usd=74411, eur_rate=0.85587, price_eur=63686.14257000
+2026-04-14 14:07:30 | INFO | crypto_pipeline | Saved ETH: price_usd=2375.51, eur_rate=0.85587, price_eur=2033.12774370
+2026-04-14 14:07:30 | INFO | crypto_pipeline | Current market prices saved successfully.
+2026-04-14 14:07:30 | INFO | current_pipeline | Current market prices updated successfully
+2026-04-14 14:07:30 | INFO | current_pipeline | Transactions for today generated successfully
+2026-04-14 14:07:30 | INFO | portfolio_snapshot | Starting portfolio daily snapshot build
+2026-04-14 14:07:31 | INFO | portfolio_snapshot | portfolio_daily_snapshot updated successfully
+2026-04-14 14:07:31 | INFO | current_pipeline | Portfolio snapshot updated successfully
+2026-04-14 14:07:31 | INFO | current_pipeline | Finished current pipeline
+2026-04-14 16:04:20 | INFO | current_pipeline | Starting current pipeline
+2026-04-14 16:04:20 | INFO | crypto_pipeline | Updating market prices
+2026-04-14 16:04:21 | INFO | crypto_pipeline | Asset IDs:
+2026-04-14 16:04:21 | INFO | crypto_pipeline | Saved BTC: price_usd=75521, eur_rate=0.85587, price_eur=64636.15827000
+2026-04-14 16:04:21 | INFO | crypto_pipeline | Saved ETH: price_usd=2392.55, eur_rate=0.85587, price_eur=2047.71176850
+2026-04-14 16:04:21 | INFO | crypto_pipeline | Current market prices saved successfully.
+2026-04-14 16:04:21 | INFO | current_pipeline | Current market prices updated successfully
+2026-04-14 16:04:21 | INFO | current_pipeline | Transactions for today generated successfully
+2026-04-14 16:04:21 | INFO | portfolio_snapshot | Starting portfolio daily snapshot build
+2026-04-14 16:04:22 | INFO | portfolio_snapshot | portfolio_daily_snapshot updated successfully
+2026-04-14 16:04:22 | INFO | current_pipeline | Portfolio snapshot updated successfully
+2026-04-14 16:04:22 | INFO | current_pipeline | Finished current pipeline
+2026-04-14 16:05:02 | INFO | current_pipeline | Starting current pipeline
+2026-04-14 16:05:02 | INFO | crypto_pipeline | Updating market prices
+2026-04-14 16:05:02 | INFO | crypto_pipeline | Asset IDs:
+2026-04-14 16:05:02 | INFO | crypto_pipeline | Saved BTC: price_usd=75508, eur_rate=0.85587, price_eur=64625.03196000
+2026-04-14 16:05:02 | INFO | crypto_pipeline | Saved ETH: price_usd=2391.17, eur_rate=0.85587, price_eur=2046.53066790
+2026-04-14 16:05:02 | INFO | crypto_pipeline | Current market prices saved successfully.
+2026-04-14 16:05:02 | INFO | current_pipeline | Current market prices updated successfully
+2026-04-14 16:05:02 | INFO | current_pipeline | Transactions for today generated successfully
+2026-04-14 16:05:02 | INFO | portfolio_snapshot | Starting portfolio daily snapshot build
+2026-04-14 16:05:02 | INFO | portfolio_snapshot | portfolio_daily_snapshot updated successfully
+2026-04-14 16:05:02 | INFO | current_pipeline | Portfolio snapshot updated successfully
+2026-04-14 16:05:02 | INFO | current_pipeline | Finished current pipeline
+2026-04-14 19:04:21 | INFO | current_pipeline | Starting current pipeline
+2026-04-14 19:04:21 | INFO | crypto_pipeline | Updating market prices
+2026-04-14 19:04:22 | INFO | crypto_pipeline | Asset IDs:
+2026-04-14 19:04:22 | INFO | crypto_pipeline | Saved BTC: price_usd=74672, eur_rate=0.84796, price_eur=63318.86912000
+2026-04-14 19:04:22 | INFO | crypto_pipeline | Saved ETH: price_usd=2332.99, eur_rate=0.84796, price_eur=1978.28220040
+2026-04-14 19:04:22 | INFO | crypto_pipeline | Current market prices saved successfully.
+2026-04-14 19:04:22 | INFO | current_pipeline | Current market prices updated successfully
+2026-04-14 19:04:22 | INFO | current_pipeline | Transactions for today generated successfully
+2026-04-14 19:04:22 | INFO | portfolio_snapshot | Starting portfolio daily snapshot build
+2026-04-14 19:04:22 | INFO | portfolio_snapshot | portfolio_daily_snapshot updated successfully
+2026-04-14 19:04:22 | INFO | current_pipeline | Portfolio snapshot updated successfully
+2026-04-14 19:04:22 | INFO | current_pipeline | Finished current pipeline
+2026-04-14 22:04:20 | INFO | current_pipeline | Starting current pipeline
+2026-04-14 22:04:20 | INFO | crypto_pipeline | Updating market prices
+2026-04-14 22:04:21 | INFO | crypto_pipeline | Asset IDs:
+2026-04-14 22:04:21 | INFO | crypto_pipeline | Saved BTC: price_usd=74263, eur_rate=0.84796, price_eur=62972.05348000
+2026-04-14 22:04:21 | INFO | crypto_pipeline | Saved ETH: price_usd=2314.19, eur_rate=0.84796, price_eur=1962.34055240
+2026-04-14 22:04:21 | INFO | crypto_pipeline | Current market prices saved successfully.
+2026-04-14 22:04:21 | INFO | current_pipeline | Current market prices updated successfully
+2026-04-14 22:04:21 | INFO | current_pipeline | Transactions for today generated successfully
+2026-04-14 22:04:21 | INFO | portfolio_snapshot | Starting portfolio daily snapshot build
+2026-04-14 22:04:22 | INFO | portfolio_snapshot | portfolio_daily_snapshot updated successfully
+2026-04-14 22:04:22 | INFO | current_pipeline | Portfolio snapshot updated successfully
+2026-04-14 22:04:22 | INFO | current_pipeline | Finished current pipeline

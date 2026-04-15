@@ -34,3 +34,155 @@
 2026-04-10 10:05:04 | INFO | portfolio_snapshot | portfolio_daily_snapshot updated successfully
 2026-04-10 10:05:04 | INFO | current_pipeline | Portfolio snapshot updated successfully
 2026-04-10 10:05:04 | INFO | current_pipeline | Finished current pipeline
+2026-04-10 13:58:46 | INFO | current_pipeline | Starting current pipeline
+2026-04-10 13:58:46 | INFO | crypto_pipeline | Updating market prices
+2026-04-10 13:58:49 | INFO | crypto_pipeline | Asset IDs:
+2026-04-10 13:58:49 | INFO | crypto_pipeline | Saved BTC: price_usd=72171, eur_rate=0.8558, price_eur=61763.94180000
+2026-04-10 13:58:49 | INFO | crypto_pipeline | Saved ETH: price_usd=2219.31, eur_rate=0.8558, price_eur=1899.28549800
+2026-04-10 13:58:49 | INFO | crypto_pipeline | Current market prices saved successfully.
+2026-04-10 13:58:49 | INFO | current_pipeline | Current market prices updated successfully
+2026-04-10 13:58:49 | INFO | current_pipeline | Transactions for today generated successfully
+2026-04-10 13:58:49 | INFO | portfolio_snapshot | Starting portfolio daily snapshot build
+2026-04-10 13:58:49 | INFO | portfolio_snapshot | portfolio_daily_snapshot updated successfully
+2026-04-10 13:58:49 | INFO | current_pipeline | Portfolio snapshot updated successfully
+2026-04-10 13:58:49 | INFO | current_pipeline | Finished current pipeline
+2026-04-10 13:58:52 | INFO | current_pipeline | Starting current pipeline
+2026-04-10 13:58:52 | INFO | crypto_pipeline | Updating market prices
+2026-04-10 13:58:53 | INFO | crypto_pipeline | Asset IDs:
+2026-04-10 13:58:53 | INFO | crypto_pipeline | Saved BTC: price_usd=72171, eur_rate=0.8558, price_eur=61763.94180000
+2026-04-10 13:58:53 | INFO | crypto_pipeline | Saved ETH: price_usd=2219.31, eur_rate=0.8558, price_eur=1899.28549800
+2026-04-10 13:58:53 | INFO | crypto_pipeline | Current market prices saved successfully.
+2026-04-10 13:58:53 | INFO | current_pipeline | Current market prices updated successfully
+2026-04-10 13:58:53 | INFO | current_pipeline | Transactions for today generated successfully
+2026-04-10 13:58:53 | INFO | portfolio_snapshot | Starting portfolio daily snapshot build
+2026-04-10 13:58:53 | INFO | portfolio_snapshot | portfolio_daily_snapshot updated successfully
+2026-04-10 13:58:53 | INFO | current_pipeline | Portfolio snapshot updated successfully
+2026-04-10 13:58:53 | INFO | current_pipeline | Finished current pipeline
+2026-04-10 18:12:07 | INFO | current_pipeline | Starting current pipeline
+2026-04-10 18:12:07 | INFO | crypto_pipeline | Updating market prices
+2026-04-10 18:12:07 | INFO | current_pipeline | Starting current pipeline
+2026-04-10 18:12:07 | INFO | crypto_pipeline | Updating market prices
+2026-04-10 18:12:08 | INFO | crypto_pipeline | Asset IDs:
+2026-04-10 18:12:08 | INFO | crypto_pipeline | Saved BTC: price_usd=72572, eur_rate=0.8539, price_eur=61969.23080000
+2026-04-10 18:12:08 | INFO | crypto_pipeline | Saved ETH: price_usd=2227.07, eur_rate=0.8539, price_eur=1901.69507300
+2026-04-10 18:12:08 | INFO | crypto_pipeline | Asset IDs:
+2026-04-10 18:12:08 | INFO | crypto_pipeline | Current market prices saved successfully.
+2026-04-10 18:12:08 | INFO | current_pipeline | Current market prices updated successfully
+2026-04-10 18:12:08 | ERROR | crypto_pipeline | Error while saving market prices: 1062 (23000): Duplicate entry '1-2026-04-10 18:12:08' for key 'market_prices.idx_market_prices_asset_date'
+Traceback (most recent call last):
+  File "C:\Users\051066\Crypto Portfolio Analytics System\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Duplicate entry '1-2026-04-10 18:12:08' for key 'market_prices.idx_market_prices_asset_date'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\051066\Crypto Portfolio Analytics System\etl\current\update_market_prices.py", line 65, in update_market_prices
+    cursor.execute("""
+    ~~~~~~~~~~~~~~^^^^
+        INSERT INTO market_prices (asset_id, price_date, price_usd, eur_rate, price_eur)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        VALUES (%s, %s, %s, %s, %s)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """, (asset_id, today, price_usd, eur_rate, price_eur))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\051066\Crypto Portfolio Analytics System\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\051066\Crypto Portfolio Analytics System\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\051066\Crypto Portfolio Analytics System\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.IntegrityError: 1062 (23000): Duplicate entry '1-2026-04-10 18:12:08' for key 'market_prices.idx_market_prices_asset_date'
+2026-04-10 18:12:08 | ERROR | current_pipeline | Current pipeline failed: 1062 (23000): Duplicate entry '1-2026-04-10 18:12:08' for key 'market_prices.idx_market_prices_asset_date'
+Traceback (most recent call last):
+  File "C:\Users\051066\Crypto Portfolio Analytics System\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Duplicate entry '1-2026-04-10 18:12:08' for key 'market_prices.idx_market_prices_asset_date'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\051066\Crypto Portfolio Analytics System\etl\current\run_current_pipeline.py", line 28, in run_current_pipeline
+    update_market_prices()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\051066\Crypto Portfolio Analytics System\etl\current\update_market_prices.py", line 65, in update_market_prices
+    cursor.execute("""
+    ~~~~~~~~~~~~~~^^^^
+        INSERT INTO market_prices (asset_id, price_date, price_usd, eur_rate, price_eur)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        VALUES (%s, %s, %s, %s, %s)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """, (asset_id, today, price_usd, eur_rate, price_eur))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\051066\Crypto Portfolio Analytics System\.venv\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\051066\Crypto Portfolio Analytics System\.venv\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\051066\Crypto Portfolio Analytics System\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.IntegrityError: 1062 (23000): Duplicate entry '1-2026-04-10 18:12:08' for key 'market_prices.idx_market_prices_asset_date'
+2026-04-10 18:12:08 | INFO | current_pipeline | Transactions for today generated successfully
+2026-04-10 18:12:08 | INFO | portfolio_snapshot | Starting portfolio daily snapshot build
+2026-04-10 18:12:09 | INFO | portfolio_snapshot | portfolio_daily_snapshot updated successfully
+2026-04-10 18:12:09 | INFO | current_pipeline | Portfolio snapshot updated successfully
+2026-04-10 18:12:09 | INFO | current_pipeline | Finished current pipeline
+2026-04-10 19:15:56 | INFO | current_pipeline | Starting current pipeline
+2026-04-10 19:15:56 | INFO | crypto_pipeline | Updating market prices
+2026-04-10 19:15:59 | INFO | crypto_pipeline | Asset IDs:
+2026-04-10 19:15:59 | INFO | crypto_pipeline | Saved BTC: price_usd=72880, eur_rate=0.8539, price_eur=62232.23200000
+2026-04-10 19:15:59 | INFO | crypto_pipeline | Saved ETH: price_usd=2243.37, eur_rate=0.8539, price_eur=1915.61364300
+2026-04-10 19:15:59 | INFO | crypto_pipeline | Current market prices saved successfully.
+2026-04-10 19:15:59 | INFO | current_pipeline | Current market prices updated successfully
+2026-04-10 19:15:59 | INFO | current_pipeline | Transactions for today generated successfully
+2026-04-10 19:15:59 | INFO | portfolio_snapshot | Starting portfolio daily snapshot build
+2026-04-10 19:15:59 | INFO | portfolio_snapshot | portfolio_daily_snapshot updated successfully
+2026-04-10 19:15:59 | INFO | current_pipeline | Portfolio snapshot updated successfully
+2026-04-10 19:15:59 | INFO | current_pipeline | Finished current pipeline
+2026-04-10 22:05:02 | INFO | current_pipeline | Starting current pipeline
+2026-04-10 22:05:02 | INFO | crypto_pipeline | Updating market prices
+2026-04-10 22:05:03 | INFO | crypto_pipeline | Asset IDs:
+2026-04-10 22:05:03 | INFO | crypto_pipeline | Saved BTC: price_usd=73231, eur_rate=0.8539, price_eur=62531.95090000
+2026-04-10 22:05:03 | INFO | crypto_pipeline | Saved ETH: price_usd=2253.24, eur_rate=0.8539, price_eur=1924.04163600
+2026-04-10 22:05:03 | INFO | crypto_pipeline | Current market prices saved successfully.
+2026-04-10 22:05:03 | INFO | current_pipeline | Current market prices updated successfully
+2026-04-10 22:05:03 | INFO | current_pipeline | Transactions for today generated successfully
+2026-04-10 22:05:03 | INFO | portfolio_snapshot | Starting portfolio daily snapshot build
+2026-04-10 22:05:03 | INFO | portfolio_snapshot | portfolio_daily_snapshot updated successfully
+2026-04-10 22:05:03 | INFO | current_pipeline | Portfolio snapshot updated successfully
+2026-04-10 22:05:03 | INFO | current_pipeline | Finished current pipeline
