@@ -1,127 +1,156 @@
-**Crypto Portfolio Analytics System******
+# 📊 Crypto Portfolio Analytics System
 
-**Projektbeschreibung**
+## 📌 About the project
 
-Dieses Projekt ist ein einfaches Data-Analytics-System für Kryptowährungen.
-Es lädt automatisch Marktdaten aus externen APIs, verarbeitet diese Daten und stellt sie für Analysen und Visualisierung bereit.
+This project is a simple **data analytics system for cryptocurrencies**.  
+It automatically loads market data from external APIs, processes it, and prepares it for analysis and visualization.
 
-Das Ziel ist es, ein Portfolio von Kryptowährungen zu analysieren und wichtige Kennzahlen wie Gewinn, Verlust und Portfolio-Wert zu berechnen.
+The goal is to analyze a crypto portfolio and calculate key metrics such as:
+- profit
+- loss
+- portfolio value
 
-** Ziele des Projekts**
-        Analyse von Kryptowährungen (Bitcoin, Ethereum)
-        Arbeiten mit echten Daten aus APIs
-        Aufbau eines ETL-Prozesses (Extract, Transform, Load)
-        Berechnung von Portfolio-Kennzahlen
-        Visualisierung der Ergebnisse in Power BI
+---
 
+## 🎯 Project goals
 
-** Datenquellen (APIs)**
-        CoinGecko API → Kryptowährungspreise
-        Exchange Rate API → USD → EUR Wechselkurse
+- Analyze cryptocurrencies (Bitcoin, Ethereum)
+- Work with real API data
+- Build an ETL process (Extract, Transform, Load)
+- Calculate portfolio metrics
+- Visualize data in Power BI
 
-Die Daten werden regelmäßig geladen und verarbeitet.
+---
 
-**Technologien**
+## 🌐 Data sources (APIs)
 
-    Python → ETL-Prozess und Datenverarbeitung
-    Pandas → Datenanalyse und Transformation
-    MySQL → Datenbank
-    Power BI → Visualisierung
-    Jupyter Notebook → Analyse und Tests
-    DBeaver → Datenbankverwaltung
-    Requests → API-Zugriffe
-    Windows Task Scheduler → Automatisierung
+- **CoinGecko API** → cryptocurrency prices  
+- **Exchange Rate API** → USD → EUR conversion  
 
+Data is fetched and processed regularly.
 
-**Systemarchitektur**
+---
 
-Das System basiert auf einem einfachen ETL-Prozess:
+## 🛠️ Technologies used
 
-    Extract
-        Laden von Marktdaten (BTC, ETH)
-        Laden von Wechselkursen
-    Transform
-        Umrechnung USD → EUR
-        Berechnung von Kennzahlen
-        Verarbeitung von Transaktionen
-    Load
-        Speicherung in MySQL
-        Aufbau von Portfolio-Snapshots
+- Python → ETL pipeline and data processing  
+- Pandas → data transformation  
+- MySQL → database  
+- Power BI → visualization  
+- Jupyter Notebook → analysis and testing  
+- DBeaver → database management  
+- Requests → API calls  
+- Windows Task Scheduler → automation  
 
+---
 
-**Ablauf (Pipeline)**
+## 🧱 System architecture
 
-Die Hauptpipeline:
+The system is based on a simple ETL process:
 
-run_current_pipeline.py
+### Extract
+- Load BTC and ETH market data
+- Load exchange rates
 
-Schritte:
+### Transform
+- Convert USD → EUR
+- Calculate metrics
+- Process transactions
 
-Marktpreise laden
-Wechselkurse laden
-Daten berechnen
-Transaktionen generieren
-Portfolio-Snapshot erstellen
-Daten in Datenbank speichern
+### Load
+- Store data in MySQL
+- Create portfolio snapshots
 
+---
 
-**Datenbank**
+## 🔄 Pipeline
 
-Wichtige Tabellen:
+Main script:
 
-market_prices → Preise von BTC und ETH
-transactions → Kauf- und Verkaufsdaten
-portfolio_daily_snapshot → fertige Daten für Analyse
-
-Zusätzlich wurden Views erstellt für einfachere Analyse.
-
-**Power BI Dashboard**
-
-Das Dashboard zeigt:
-
-Portfolio Value
-Preisentwicklung (BTC, ETH)
-Unrealized Profit
-Analyse pro Kunde
-
-Die Daten werden direkt aus der Datenbank geladen.
-
-** Wichtige Kennzahlen**
-Balance Quantity → aktueller Bestand
-Average Buy Price → durchschnittlicher Kaufpreis
-Book Value → Investitionswert
-Market Value → aktueller Marktwert
-Realized Profit → realisierter Gewinn
-Unrealized Profit → nicht realisierter Gewinn
-
-
-**Projekt starten**
-Datenbank starten (MySQL)
-Python-Umgebung aktivieren
-Pipeline ausführen:
+```bash
 python run_current_pipeline.py
+```
 
+### Steps:
+- Load market prices  
+- Load exchange rates  
+- Calculate data  
+- Generate transactions  
+- Create portfolio snapshot  
+- Save data to database  
 
+---
 
-** Automatisierung**
+## 🗄️ Database
 
-Das System kann automatisch ausgeführt werden:
+### Main tables:
+- `market_prices` → BTC and ETH prices  
+- `transactions` → buy/sell operations  
+- `portfolio_daily_snapshot` → final analytics data  
 
-Windows Task Scheduler
-Regelmäßige Updates der Daten (z. B. alle 2 Stunden)
+Additional SQL views are used for easier analysis.
 
+---
 
-** Fazit**
+## 📊 Power BI Dashboard
 
-Dieses Projekt zeigt, wie ein vollständiger Data-Analytics-Prozess aufgebaut werden kann:
+The dashboard includes:
 
-Daten laden (API)
-Daten verarbeiten (ETL)
-Daten speichern (SQL)
-Daten visualisieren (Power BI)
+- Portfolio Value  
+- BTC / ETH price trends  
+- Unrealized Profit  
+- Analysis per customer  
 
-Das System ist einfach, aber skalierbar und realitätsnah.
+Data is loaded directly from the database.
 
-**👩‍💻 Autorin**
+---
 
-Kateryna Savelieva
+## 📈 Key metrics
+
+- **Balance Quantity** → current holdings  
+- **Average Buy Price** → average purchase price  
+- **Book Value** → investment value  
+- **Market Value** → current value  
+- **Realized Profit** → profit from sales  
+- **Unrealized Profit** → potential profit  
+
+---
+
+## ▶️ How to run the project
+
+### 1. Start database
+Run MySQL server
+
+### 2. Activate Python environment
+
+### 3. Run pipeline
+```bash
+python run_current_pipeline.py
+```
+
+## ⏱️ Automation
+
+The system supports automation using:
+
+- Windows Task Scheduler  
+- Regular data updates (e.g. every 2 hours)  
+
+---
+
+## 🧠 What this project demonstrates
+
+This project shows a full data workflow:
+
+- API data collection  
+- ETL processing  
+- SQL storage  
+- Power BI visualization  
+
+The system is simple but scalable and realistic.
+
+---
+
+## 👩‍💻 Author
+
+**Kateryna Savelieva**  
+Python | SQL | Data Analytics | ETL | Power BI
